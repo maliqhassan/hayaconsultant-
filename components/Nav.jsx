@@ -42,7 +42,7 @@ export default function Nav() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="btn btn-outline-nav nav-cta">
+            <a href="#contact" className="btn btn-copper nav-cta">
               Contact Us
             </a>
             <button
@@ -64,7 +64,7 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
-        <a href="#contact" className="btn btn-outline-nav" onClick={() => setOpen(false)}>
+        <a href="#contact" className="btn btn-copper" onClick={() => setOpen(false)}>
           Contact Us
         </a>
       </div>
