@@ -65,7 +65,7 @@ export default function ContactForm() {
           required
         />
       </div>
-      <button type="submit" className="btn btn-gold btn-lg form-submit">
+      <button type="submit" className="btn btn-copper btn-lg form-submit">
         Send Message
       </button>
     </form>
