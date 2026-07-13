@@ -366,7 +366,7 @@ export default function Home() {
       </div>
 
       {/* PROCESS */}
-      <section id="process">
+      <section className="process" id="process">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
             <span className="eyebrow reveal">How We Work</span>
