@@ -175,17 +175,19 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero" aria-label="Introduction">
-        <div className="hero-left">
+        <div className="hero-bg">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&auto=format&fit=crop&q=80"
+            alt=""
+          />
+        </div>
+        <div className="hero-inner">
           <div className="hero-tag">
             <span className="hero-tag-dot"></span>
             Management Consulting Agency
           </div>
           <h1 className="h1">
-            We turn <span>complex</span>
-            <br />
-            challenges into
-            <br />
-            clear outcomes
+            We turn <span>complex</span> challenges into clear outcomes
           </h1>
           <p className="lead" style={{ marginTop: '1.5rem' }}>
             Haya Consultancy is a full-service management consulting agency. We
@@ -202,29 +204,28 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-right">
-          <div className="hero-img-main">
-            <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80"
-              alt="Professional consulting team"
-            />
-          </div>
-          <div className="hero-card">
-            <div className="hero-card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <div>
-              <p>Average Revenue Growth</p>
-              <strong>+34% within 18 months</strong>
-            </div>
-          </div>
-          <div className="hero-card2">
-            <p>Client Satisfaction</p>
-            <div className="hero-card2-row">
-              <span className="star">★★★★★</span>
-              <strong>4.9 / 5.0</strong>
+        <svg className="hero-scroll" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 5v14M19 12l-7 7-7-7" />
+        </svg>
+        <div className="hero-strip">
+          <div className="container">
+            <div className="hero-strip-grid">
+              <div className="hstat">
+                <div className="hstat-n">180+</div>
+                <div className="hstat-l">Engagements</div>
+              </div>
+              <div className="hstat">
+                <div className="hstat-n">4.9/5</div>
+                <div className="hstat-l">Client Satisfaction</div>
+              </div>
+              <div className="hstat">
+                <div className="hstat-n">+34%</div>
+                <div className="hstat-l">Avg. Revenue Growth</div>
+              </div>
+              <div className="hstat">
+                <div className="hstat-n">12</div>
+                <div className="hstat-l">Countries Served</div>
+              </div>
             </div>
           </div>
         </div>
