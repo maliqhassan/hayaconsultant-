@@ -1,0 +1,67 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+const links = [
+  { href: '#services', label: 'Services' },
+  { href: '#about', label: 'About' },
+  { href: '#process', label: 'Process' },
+  { href: '#testimonials', label: 'Clients' },
+];
+
+export default function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <>
+      <nav className={scrolled ? 'scrolled' : ''}>
+        <div className="container">
+          <div className="nav-inner">
+            <a href="/" className="nav-logo">
+              <div className="logo-sq">H</div>
+              <span>Haya</span>
+            </a>
+            <ul className="nav-links">
+              {links.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+            <a href="#contact" className="btn btn-gold nav-cta">
+              Contact Us
+            </a>
+            <button
+              className="hamburger"
+              aria-label="Open menu"
+              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div className={`mobile-menu${open ? ' open' : ''}`}>
+        {links.map((l) => (
+          <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            {l.label}
+          </a>
+        ))}
+        <a href="#contact" className="btn btn-gold" onClick={() => setOpen(false)}>
+          Contact Us
+        </a>
+      </div>
+    </>
+  );
+}
