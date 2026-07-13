@@ -166,6 +166,29 @@ const gallery = [
   },
 ];
 
+const team = [
+  {
+    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=80',
+    name: 'Omar Haddad',
+    role: 'Managing Partner',
+  },
+  {
+    photo: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=80',
+    name: 'Nadia Karim',
+    role: 'Head of Strategy',
+  },
+  {
+    photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80',
+    name: 'Yusuf Rahman',
+    role: 'Financial Advisory Lead',
+  },
+  {
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80',
+    name: 'Amira Saleh',
+    role: 'Operations Director',
+  },
+];
+
 const stats = [
   { count: '180', suffix: '+', l: 'Engagements completed' },
   { count: '12', suffix: '', l: 'Countries served' },
@@ -388,6 +411,35 @@ export default function Home() {
                     <div className="aname">{t.name}</div>
                     <div className="atitle">{t.title}</div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section className="team" id="team">
+        <div className="container">
+          <div style={{ maxWidth: 600 }}>
+            <span className="eyebrow" data-aos="fade-up">The People</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
+              Senior advisors who stay on the project
+            </h2>
+            <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
+              Every engagement is led by a partner you meet on day one — backed
+              by specialists across strategy, finance, and operations.
+            </p>
+          </div>
+          <div className="team-grid">
+            {team.map((m, i) => (
+              <div className="team-card" data-aos="fade-up" data-aos-delay={i * 90} key={m.name}>
+                <div className="team-photo">
+                  <img src={m.photo} alt={m.name} loading="lazy" />
+                </div>
+                <div className="team-info">
+                  <h4>{m.name}</h4>
+                  <p>{m.role}</p>
                 </div>
               </div>
             ))}
