@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const links = [
   { href: '#services', label: 'Services' },
@@ -22,7 +23,12 @@ export default function Nav() {
 
   return (
     <>
-      <nav className={scrolled ? 'scrolled' : ''}>
+      <motion.nav
+        className={scrolled ? 'scrolled' : ''}
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
         <div className="container">
           <div className="nav-inner">
             <a href="/" className="nav-logo">
@@ -51,7 +57,7 @@ export default function Nav() {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         {links.map((l) => (
           <a key={l.href} href={l.href} onClick={() => setOpen(false)}>

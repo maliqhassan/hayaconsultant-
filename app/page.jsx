@@ -1,5 +1,7 @@
 import Nav from '../components/Nav';
-import Reveal from '../components/Reveal';
+import Hero from '../components/Hero';
+import AOSInit from '../components/AOSInit';
+import GsapFX from '../components/GsapFX';
 import ContactForm from '../components/ContactForm';
 
 const trustNames = [
@@ -165,10 +167,10 @@ const gallery = [
 ];
 
 const stats = [
-  { n: '180+', l: 'Engagements completed' },
-  { n: '12', l: 'Countries served' },
-  { n: '94%', l: 'Client retention rate' },
-  { n: '$2B+', l: 'Client value influenced' },
+  { count: '180', suffix: '+', l: 'Engagements completed' },
+  { count: '12', suffix: '', l: 'Countries served' },
+  { count: '94', suffix: '%', l: 'Client retention rate' },
+  { count: '2', prefix: '$', suffix: 'B+', l: 'Client value influenced' },
 ];
 
 const CheckIcon = () => (
@@ -187,61 +189,11 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <Reveal />
+      <AOSInit />
+      <GsapFX />
 
       {/* HERO */}
-      <section className="hero" aria-label="Introduction">
-        <div className="hero-bg">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&auto=format&fit=crop&q=80"
-            alt=""
-          />
-        </div>
-        <div className="hero-inner">
-          <h1>
-            We turn <span>complex</span> challenges into clear outcomes
-          </h1>
-          <p className="lead" style={{ marginTop: '1.5rem' }}>
-            Haya Consultancy is a full-service management consulting agency. We
-            work with businesses at every stage — from ambitious startups to
-            established enterprises — to drive sustainable growth and lasting
-            impact.
-          </p>
-          <div className="hero-actions">
-            <a href="#contact" className="btn btn-gold btn-lg">
-              Get a Free Consultation
-            </a>
-            <a href="#services" className="btn btn-outline btn-lg">
-              Our Services
-            </a>
-          </div>
-        </div>
-        <svg className="hero-scroll" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 5v14M19 12l-7 7-7-7" />
-        </svg>
-        <div className="hero-strip">
-          <div className="container">
-            <div className="hero-strip-grid">
-              <div className="hstat">
-                <div className="hstat-n">180+</div>
-                <div className="hstat-l">Engagements</div>
-              </div>
-              <div className="hstat">
-                <div className="hstat-n">4.9/5</div>
-                <div className="hstat-l">Client Satisfaction</div>
-              </div>
-              <div className="hstat">
-                <div className="hstat-n">+34%</div>
-                <div className="hstat-l">Avg. Revenue Growth</div>
-              </div>
-              <div className="hstat">
-                <div className="hstat-n">12</div>
-                <div className="hstat-l">Countries Served</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* TRUST MARQUEE */}
       <div className="trust">
@@ -258,7 +210,7 @@ export default function Home() {
       <section className="services" id="services">
         <div className="container">
           <div className="services-top">
-            <div className="reveal">
+            <div data-aos="fade-up">
               <span className="eyebrow">What We Do</span>
               <h2 className="h2">
                 Expertise aligned
@@ -266,14 +218,14 @@ export default function Home() {
                 with your ambitions
               </h2>
             </div>
-            <p className="lead reveal d1" style={{ maxWidth: '38ch' }}>
+            <p className="lead" data-aos="fade-up" data-aos-delay="100" style={{ maxWidth: '38ch' }}>
               From high-level strategy to on-the-ground execution, every
               engagement is shaped around your specific challenge.
             </p>
           </div>
           <div className="svc-grid">
             {services.map((s, i) => (
-              <div className={`svc reveal d${i % 3}`} key={s.num}>
+              <div className="svc" data-aos="fade-up" data-aos-delay={(i % 3) * 100} key={s.num}>
                 <div className="svc-num">{s.num}</div>
                 <div className="svc-icon">{s.icon}</div>
                 <h3 className="h3">{s.title}</h3>
@@ -289,7 +241,7 @@ export default function Home() {
       <section id="about">
         <div className="container">
           <div className="about-grid">
-            <div className="about-imgs reveal">
+            <div className="about-imgs" data-aos="fade-right">
               <div className="about-img-main">
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&auto=format&fit=crop&q=80"
@@ -307,7 +259,7 @@ export default function Home() {
                 <div className="about-stat-l">Years of practice</div>
               </div>
             </div>
-            <div className="reveal d1">
+            <div data-aos="fade-left">
               <span className="eyebrow">About Haya</span>
               <h2 className="h2">Built on honest advice, not inflated decks</h2>
               <p className="about-body">
@@ -330,7 +282,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a href="#contact" className="btn btn-gold btn-lg" style={{ marginTop: '2.5rem' }}>
+              <a href="#contact" className="btn btn-copper btn-lg" style={{ marginTop: '2.5rem' }}>
                 Work With Us
               </a>
             </div>
@@ -343,8 +295,15 @@ export default function Home() {
         <div className="container">
           <div className="stats-grid">
             {stats.map((s, i) => (
-              <div className={`stat reveal d${i}`} key={s.l}>
-                <div className="stat-n">{s.n}</div>
+              <div className="stat" data-aos="zoom-in" data-aos-delay={i * 80} key={s.l}>
+                <div
+                  className="stat-n"
+                  data-count={s.count}
+                  data-prefix={s.prefix || ''}
+                  data-suffix={s.suffix || ''}
+                >
+                  {(s.prefix || '') + '0' + (s.suffix || '')}
+                </div>
                 <div className="stat-l">{s.l}</div>
               </div>
             ))}
@@ -354,14 +313,15 @@ export default function Home() {
 
       {/* IMAGE SECTION */}
       <div className="img-section">
-        <img
-          className="img-section-bg"
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&auto=format&fit=crop&q=80"
-          alt="Modern office"
-        />
-        <div className="img-section-content">
+        <div className="img-section-bg" data-parallax>
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&auto=format&fit=crop&q=80"
+            alt="Modern office"
+          />
+        </div>
+        <div className="img-section-content on-dark">
           <div className="container">
-            <div className="img-section-text reveal">
+            <div className="img-section-text" data-aos="fade-up">
               <span className="eyebrow">Our Approach</span>
               <h2 className="h2">Clarity is the most valuable deliverable we provide</h2>
               <p className="lead">
@@ -369,7 +329,7 @@ export default function Home() {
                 clear point of view on what to do next — and the confidence to
                 act on it. That&apos;s what we build.
               </p>
-              <a href="#process" className="btn btn-gold btn-lg" style={{ marginTop: '2rem' }}>
+              <a href="#process" className="btn btn-copper btn-lg" style={{ marginTop: '2rem' }}>
                 See How We Work
               </a>
             </div>
@@ -381,16 +341,16 @@ export default function Home() {
       <section className="process" id="process">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
-            <span className="eyebrow reveal">How We Work</span>
-            <h2 className="h2 reveal d1">A clear process with no unnecessary complexity</h2>
-            <p className="lead reveal d2" style={{ marginTop: '1rem' }}>
+            <span className="eyebrow" data-aos="fade-up">How We Work</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">A clear process with no unnecessary complexity</h2>
+            <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
               Every engagement moves through a consistent structure so you
               always know where things stand and what comes next.
             </p>
           </div>
           <div className="process-grid">
             {steps.map((s, i) => (
-              <div className={`pstep reveal d${i}`} data-n={s.n} key={s.n}>
+              <div className="pstep" data-n={s.n} data-aos="fade-up" data-aos-delay={i * 100} key={s.n}>
                 <div className="pstep-n">{s.label}</div>
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.desc}</p>
@@ -399,7 +359,7 @@ export default function Home() {
           </div>
           <div className="gallery">
             {gallery.map((g, i) => (
-              <div className={`gallery-item reveal d${i}`} key={g.cap}>
+              <div className="gallery-item" data-aos="zoom-in" data-aos-delay={i * 100} key={g.cap}>
                 <img src={g.src} alt={g.cap} loading="lazy" />
                 <span className="gallery-cap">{g.cap}</span>
               </div>
@@ -411,13 +371,13 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <section className="testimonials" id="testimonials">
         <div className="container">
-          <div>
-            <span className="eyebrow reveal">Client Voices</span>
-            <h2 className="h2 reveal d1">What our partners say</h2>
+          <div className="on-dark">
+            <span className="eyebrow" data-aos="fade-up">Client Voices</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">What our partners say</h2>
           </div>
           <div className="tgrid">
             {testimonials.map((t, i) => (
-              <div className={`tcard reveal d${i}`} key={t.name}>
+              <div className="tcard" data-aos="fade-up" data-aos-delay={(i % 2) * 100} key={t.name}>
                 <div className="tcard-stars">★★★★★</div>
                 <blockquote>{t.quote}</blockquote>
                 <div className="tauthor">
@@ -439,15 +399,15 @@ export default function Home() {
       <section className="contact" id="contact">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
-            <span className="eyebrow reveal">Get In Touch</span>
-            <h2 className="h2 reveal d1">Let&apos;s figure out what&apos;s possible together</h2>
-            <p className="lead reveal d2" style={{ marginTop: '1rem' }}>
+            <span className="eyebrow" data-aos="fade-up">Get In Touch</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">Let&apos;s figure out what&apos;s possible together</h2>
+            <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
               No obligation, no pitch deck on the first call. Just an honest
               conversation about what you&apos;re trying to accomplish.
             </p>
           </div>
           <div className="contact-grid">
-            <div className="reveal">
+            <div data-aos="fade-right">
               <div className="contact-info-item">
                 <div className="contact-info-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -491,7 +451,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="reveal d1">
+            <div data-aos="fade-left">
               <ContactForm />
             </div>
           </div>
