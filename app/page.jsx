@@ -1,5 +1,6 @@
 import Nav from '../components/Nav';
 import Reveal from '../components/Reveal';
+import ContactForm from '../components/ContactForm';
 
 const trustNames = [
   'Meridian Group',
@@ -121,30 +122,45 @@ const testimonials = [
   {
     quote:
       "Haya didn't just give us a strategy deck and leave. They worked alongside our leadership team for six months to make sure the transformation actually happened. The results exceeded every target we set.",
-    initial: 'S',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80',
     name: 'Sara Al-Mansoori',
     title: 'CEO, Meridian Holdings',
   },
   {
     quote:
       'Their financial advisory team helped us navigate a complex acquisition in a way that protected value and gave our board genuine confidence. Direct, honest, and completely accountable throughout.',
-    initial: 'K',
+    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&auto=format&fit=crop&q=80',
     name: 'Khalid Farouqi',
     title: 'CFO, Arkan Capital',
   },
   {
     quote:
       'We engaged Haya for a market expansion into three new countries. Their on-the-ground analysis and commercial model work saved us from several costly mistakes and got us to revenue 40% faster.',
-    initial: 'L',
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&auto=format&fit=crop&q=80',
     name: 'Layla Rashid',
     title: 'COO, Noor Ventures',
   },
   {
     quote:
       'The operations review they conducted identified inefficiencies we had been living with for years. Within a quarter of implementation, our throughput improved by 28% with the same team size.',
-    initial: 'F',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80',
     name: 'Faisal Al-Hadid',
     title: 'MD, Delta Partners',
+  },
+];
+
+const gallery = [
+  {
+    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80',
+    cap: 'Strategy Workshops',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&auto=format&fit=crop&q=80',
+    cap: 'Embedded Delivery Teams',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=800&auto=format&fit=crop&q=80',
+    cap: 'Executive Advisory',
   },
 ];
 
@@ -182,11 +198,7 @@ export default function Home() {
           />
         </div>
         <div className="hero-inner">
-          <div className="hero-tag">
-            <span className="hero-tag-dot"></span>
-            Management Consulting Agency
-          </div>
-          <h1 className="h1">
+          <h1>
             We turn <span>complex</span> challenges into clear outcomes
           </h1>
           <p className="lead" style={{ marginTop: '1.5rem' }}>
@@ -385,6 +397,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="gallery">
+            {gallery.map((g, i) => (
+              <div className={`gallery-item reveal d${i}`} key={g.cap}>
+                <img src={g.src} alt={g.cap} loading="lazy" />
+                <span className="gallery-cap">{g.cap}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -401,7 +421,9 @@ export default function Home() {
                 <div className="tcard-stars">★★★★★</div>
                 <blockquote>{t.quote}</blockquote>
                 <div className="tauthor">
-                  <div className="avatar">{t.initial}</div>
+                  <div className="avatar">
+                    <img src={t.photo} alt={t.name} loading="lazy" />
+                  </div>
                   <div>
                     <div className="aname">{t.name}</div>
                     <div className="atitle">{t.title}</div>
@@ -413,30 +435,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta" id="contact">
-        <div className="cta-bg-img">
-          <img
-            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&auto=format&fit=crop&q=80"
-            alt=""
-          />
-        </div>
-        <div className="cta-overlay"></div>
-        <div className="cta-inner">
-          <div className="container">
-            <span className="eyebrow eyebrow-center reveal">Ready to Begin</span>
+      {/* CONTACT */}
+      <section className="contact" id="contact">
+        <div className="container">
+          <div style={{ maxWidth: 600 }}>
+            <span className="eyebrow reveal">Get In Touch</span>
             <h2 className="h2 reveal d1">Let&apos;s figure out what&apos;s possible together</h2>
-            <p className="lead reveal d2" style={{ margin: '0 auto 2.5rem' }}>
+            <p className="lead reveal d2" style={{ marginTop: '1rem' }}>
               No obligation, no pitch deck on the first call. Just an honest
               conversation about what you&apos;re trying to accomplish.
             </p>
-            <div className="cta-actions reveal d3">
-              <a href="mailto:hello@hayaconsultancy.com" className="btn btn-gold btn-lg">
-                hello@hayaconsultancy.com
-              </a>
-              <a href="tel:+97145550000" className="btn btn-outline btn-lg">
-                +971 4 555 0000
-              </a>
+          </div>
+          <div className="contact-grid">
+            <div className="reveal">
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>Dubai, United Arab Emirates</p>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>hello@hayaconsultancy.com</p>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+971 4 555 0000</p>
+                </div>
+              </div>
+              <div className="contact-img">
+                <img
+                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=900&auto=format&fit=crop&q=80"
+                  alt="Haya Consultancy office"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="reveal d1">
+              <ContactForm />
             </div>
           </div>
         </div>
