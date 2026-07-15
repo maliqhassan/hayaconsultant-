@@ -12,9 +12,9 @@ export default function ContactForm() {
       `New inquiry: ${data.get('service')} — ${data.get('name')}`
     );
     const body = encodeURIComponent(
-      `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nService: ${data.get('service')}\n\n${data.get('message')}`
+      `Name: ${data.get('name')}\nPhone: ${data.get('phone')}\nService: ${data.get('service')}\n\n${data.get('message')}`
     );
-    window.location.href = `mailto:hello@hayaconsultancy.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hayavisa28@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -40,19 +40,21 @@ export default function ContactForm() {
           <input id="name" name="name" type="text" placeholder="Your name" required />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@company.com" required />
+          <label htmlFor="phone">Phone / WhatsApp</label>
+          <input id="phone" name="phone" type="tel" placeholder="03xx xxxxxxx" required />
         </div>
       </div>
       <div className="form-group">
-        <label htmlFor="service">Service Interested In</label>
-        <select id="service" name="service" defaultValue="Business Strategy">
-          <option>Business Strategy</option>
-          <option>Financial Advisory</option>
-          <option>Operations Excellence</option>
-          <option>Digital Transformation</option>
-          <option>Leadership &amp; Talent</option>
-          <option>Market Expansion</option>
+        <label htmlFor="service">I&apos;m Interested In</label>
+        <select id="service" name="service" defaultValue="Work Visa & Manpower">
+          <option>Work Visa &amp; Manpower</option>
+          <option>Employment Contract</option>
+          <option>Medical Appointment</option>
+          <option>File Preparation</option>
+          <option>Iqama / Work Permit</option>
+          <option>Air Ticket Booking</option>
+          <option>Umrah Visa Services</option>
+          <option>Visit Visa (Individual/Family)</option>
           <option>Other</option>
         </select>
       </div>
@@ -61,7 +63,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder="Tell us briefly about your challenge…"
+          placeholder="Tell us briefly about your requirement…"
           required
         />
       </div>

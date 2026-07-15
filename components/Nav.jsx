@@ -8,7 +8,7 @@ const links = [
   { href: '#about', label: 'About' },
   { href: '#process', label: 'Process' },
   { href: '#team', label: 'Team' },
-  { href: '#testimonials', label: 'Clients' },
+  { href: '#faq', label: 'FAQs' },
 ];
 
 export default function Nav() {
@@ -34,7 +34,7 @@ export default function Nav() {
           <div className="nav-inner">
             <a href="/" className="nav-logo">
               <div className="logo-sq">H</div>
-              <span>Haya</span>
+              <span>Haya Visa</span>
             </a>
             <ul className="nav-links">
               {links.map((l) => (
