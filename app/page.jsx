@@ -5,80 +5,146 @@ import GsapFX from '../components/GsapFX';
 import ContactForm from '../components/ContactForm';
 
 const trustNames = [
-  'Meridian Group',
-  'Arkan Capital',
-  'Bayt Holdings',
-  'Noor Ventures',
-  'Delta Partners',
-  'Gulf Strategic',
-  'Apex Advisory',
+  'GAMCA Approved Panels',
+  'Verified Saudi Employers',
+  'Licensed Recruitment',
+  'Legal Contract Guarantee',
+  'Umrah Travel Partners',
+  'Ministry Compliant',
 ];
 
 const services = [
   {
     num: '01',
-    title: 'Business Strategy',
-    desc: "Define where you're going and how to get there. We help leadership teams build strategies that are clear, differentiated, and executable.",
+    title: 'Work Visa & Manpower Services',
+    desc: 'We connect job seekers with verified Saudi employers and help businesses source dependable manpower across construction, healthcare, hospitality, technical trades, and general labor.',
+    points: [
+      'Work visa processing for Saudi Arabia',
+      'Screening of skilled, semi-skilled & professional candidates',
+      'Bulk manpower recruitment for companies and projects',
+      'Coordination with licensed, verified Saudi employers',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4l-5 5-4-4-4 4" />
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
       </svg>
     ),
   },
   {
     num: '02',
-    title: 'Financial Advisory',
-    desc: 'From capital allocation to M&A readiness, we bring rigorous financial thinking to your most consequential decisions.',
+    title: 'Employment With Proper Contracts',
+    desc: "Every placement comes with a proper, legally binding employment contract — not just a verbal promise. You'll know exactly what you're signing up for before you travel.",
+    points: [
+      'Clear terms for job role, salary & working hours',
+      'Contract duration, renewal & termination terms',
+      'Employer obligations, accommodation & benefits',
+      'Full transparency before departure — no hidden clauses',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8" />
-        <path d="M12 18V6" />
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <path d="M14 2v6h6M9 15l2 2 4-4" />
       </svg>
     ),
   },
   {
     num: '03',
-    title: 'Operations Excellence',
-    desc: 'Eliminate friction and build operating systems that scale — without sacrificing the quality your customers expect.',
+    title: 'Medical & Appointment Services',
+    desc: 'Every overseas work visa requires a medical fitness certificate from an approved medical center. We take the guesswork out of this step, start to finish.',
+    points: [
+      'Booking at GAMCA-approved medical centers',
+      'Guidance on required tests & fitness criteria',
+      'Follow-up on medical reports and submission',
+      'Re-scheduling & support for complications',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20V10M6 20V4M18 20v-6" />
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7z" />
+        <path d="M9 12h1.5l1-2 2 4 1-2H16" />
       </svg>
     ),
   },
   {
     num: '04',
-    title: 'Digital Transformation',
-    desc: 'Navigate the shift to digital with a roadmap that aligns technology investment to business outcomes.',
+    title: 'File Preparation',
+    desc: 'A strong visa application starts with a correctly prepared file. Our team makes sure nothing is missing or incorrect before submission.',
+    points: [
+      'Document collection, verification & organization',
+      'Application form filling per embassy/GAMCA rules',
+      'File compilation to exact immigration standards',
+      'Accuracy checks to prevent rejection or delay',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <path d="M14 2v6h6M8 13h8M8 17h5" />
       </svg>
     ),
   },
   {
     num: '05',
-    title: 'Leadership & Talent',
-    desc: 'Build leadership teams and talent systems that can carry strategy into execution across every level of the organization.',
+    title: 'Legal & Administrative Paperwork',
+    desc: 'Once you are in Saudi Arabia, staying legally compliant matters just as much as getting there. We assist with Iqama and work permit paperwork after deployment.',
+    points: [
+      'Iqama (residency permit) processing & renewal',
+      'Work permit documentation',
+      'Guidance on Saudi labor law & Kafala sponsorship',
+      'Assistance with government formalities',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+        <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" />
+        <path d="M9 12l2 2 4-4" />
       </svg>
     ),
   },
   {
     num: '06',
-    title: 'Market Expansion',
-    desc: 'Enter new markets with confidence. We map opportunities, assess risks, and build the commercial model to win from day one.',
+    title: 'Air Ticket Booking',
+    desc: 'We handle your travel arrangements so your journey starts smoothly from day one — individual or group, outbound or return.',
+    points: [
+      'Individual and group air ticket booking',
+      'Travel dates coordinated with visa & joining schedule',
+      'Support for outbound and return/exit tickets',
+    ],
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 22l20-9L2 2v7l14 2-14 2v9z" />
+      </svg>
+    ),
+  },
+  {
+    num: '07',
+    title: 'Umrah Visa Services',
+    desc: 'Planning to perform Umrah? We manage the complete package — visa, accommodation, and travel — so you can focus on your spiritual journey.',
+    points: [
+      'Umrah visa application and processing',
+      'Hotel booking near Haram in Makkah & Madinah',
+      'Guidance for individuals, families & groups',
+      'Complete travel coordination — flights & transport',
+    ],
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v4M8 7h8l2 5H6l2-5z" />
+        <path d="M4 21h16M6 21v-4a6 6 0 0112 0v4" />
+      </svg>
+    ),
+  },
+  {
+    num: '08',
+    title: 'Visit Visa Services',
+    desc: 'Whether visiting family, attending business meetings, or exploring Saudi Arabia, we make the visit visa process simple for individuals and families.',
+    points: [
+      'Individual visit visa processing',
+      'Family visit visa processing',
+      'Document guidance and application support',
+      'Assistance with validity & extensions',
+    ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
-        <line x1="2" y1="12" x2="22" y2="12" />
-        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+        <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
       </svg>
     ),
   },
@@ -86,16 +152,16 @@ const services = [
 
 const aboutPoints = [
   {
-    title: 'Senior-led engagements',
-    desc: 'You meet the partner on day one — and they stay with the project through delivery.',
+    title: 'No agents, no middlemen',
+    desc: 'We manage candidate sourcing, contracts, medicals, ticketing, and departure directly — clients never deal with confusing paperwork alone.',
   },
   {
-    title: 'No boilerplate',
-    desc: 'Every engagement starts from first principles, tailored to your specific context and constraints.',
+    title: 'Full transparency & compliance',
+    desc: 'We work in line with both Pakistani and Saudi regulations, so every worker travels with a legal contract.',
   },
   {
-    title: 'Embedded execution',
-    desc: "We don't hand off and walk away. We build capability that outlasts the engagement.",
+    title: 'Accurate, timely guidance',
+    desc: 'From job seekers to travelers, everyone gets clear next steps — not vague promises.',
   },
 ];
 
@@ -103,97 +169,108 @@ const steps = [
   {
     n: '1',
     label: 'STEP 01',
-    title: 'Understand',
-    desc: 'A deep diagnostic of your organization, market, and the specific challenge. No assumptions — only evidence gathered with your team.',
+    title: 'Consultation & Requirement Review',
+    desc: "We understand your goal — employment, Umrah, or a family visit — and guide you on the right visa category.",
   },
   {
     n: '2',
     label: 'STEP 02',
-    title: 'Design',
-    desc: 'Translate findings into a clear strategic response — prioritized, sequenced, and calibrated to your actual resources and risk tolerance.',
+    title: 'Document & File Preparation',
+    desc: 'We collect, verify, and prepare your complete file, including medical appointments where required.',
   },
   {
     n: '3',
     label: 'STEP 03',
-    title: 'Execute',
-    desc: 'Implementation support and real-time adjustment until results are locked in — not just promised on a slide deck.',
+    title: 'Visa Processing & Approval',
+    desc: 'Our team manages the visa application, contract issuance, and all legal/administrative steps.',
+  },
+  {
+    n: '4',
+    label: 'STEP 04',
+    title: 'Travel & Deployment',
+    desc: 'We arrange air tickets, hotel bookings (for Umrah), and coordinate your departure and arrival smoothly.',
   },
 ];
 
-const testimonials = [
+const whyUs = [
+  { title: 'End-to-End Service', desc: 'From contract to ticket, we handle every step of your journey.' },
+  { title: 'Verified Employers Only', desc: 'No fake job offers, no exploitation — every employer is checked.' },
+  { title: 'Legally Binding Contracts', desc: 'Full transparency before you travel, with terms in writing.' },
+  { title: 'Experienced Team', desc: 'Deep understanding of Pakistan–Saudi visa procedures.' },
+  { title: 'Complete Umrah Packages', desc: 'Visa, hotel, and travel handled together, seamlessly.' },
+  { title: 'Honest Guidance', desc: 'No false promises — just clear and accurate information.' },
+];
+
+const faqs = [
   {
-    quote:
-      "Haya didn't just give us a strategy deck and leave. They worked alongside our leadership team for six months to make sure the transformation actually happened. The results exceeded every target we set.",
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80',
-    name: 'Sara Al-Mansoori',
-    title: 'CEO, Meridian Holdings',
+    q: 'Do you provide job contracts before departure?',
+    a: 'Yes. Every work visa placement includes a proper employment contract outlining salary, job role, and terms, provided before you travel.',
   },
   {
-    quote:
-      'Their financial advisory team helped us navigate a complex acquisition in a way that protected value and gave our board genuine confidence. Direct, honest, and completely accountable throughout.',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&auto=format&fit=crop&q=80',
-    name: 'Khalid Farouqi',
-    title: 'CFO, Arkan Capital',
+    q: 'Is the medical test mandatory for a work visa?',
+    a: 'Yes, a medical fitness certificate from an approved center is required for all Saudi work visas. We help you book and complete this step.',
   },
   {
-    quote:
-      'We engaged Haya for a market expansion into three new countries. Their on-the-ground analysis and commercial model work saved us from several costly mistakes and got us to revenue 40% faster.',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&auto=format&fit=crop&q=80',
-    name: 'Layla Rashid',
-    title: 'COO, Noor Ventures',
+    q: 'Can you help with Iqama renewal after I arrive in Saudi Arabia?',
+    a: 'Yes, we assist with Iqama and work permit-related paperwork even after deployment.',
   },
   {
-    quote:
-      'The operations review they conducted identified inefficiencies we had been living with for years. Within a quarter of implementation, our throughput improved by 28% with the same team size.',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80',
-    name: 'Faisal Al-Hadid',
-    title: 'MD, Delta Partners',
+    q: 'Do you arrange hotel stays for Umrah pilgrims?',
+    a: 'Yes, our Umrah packages include visa processing along with hotel booking and travel arrangements in Makkah and Madinah.',
+  },
+  {
+    q: 'Can families apply for a visit visa together?',
+    a: 'Yes, we process both individual and family visit visas.',
+  },
+  {
+    q: 'How long does the work visa process take?',
+    a: 'Processing time varies by case, but our team works to complete documentation and submission as quickly as possible once your file is ready.',
   },
 ];
 
 const gallery = [
   {
-    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80',
-    cap: 'Strategy Workshops',
+    src: 'https://images.unsplash.com/photo-1554774853-719586f82d77?w=800&auto=format&fit=crop&q=80',
+    cap: 'Work Visa Deployment',
   },
   {
-    src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&auto=format&fit=crop&q=80',
-    cap: 'Embedded Delivery Teams',
+    src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&auto=format&fit=crop&q=80',
+    cap: 'Umrah Travel & Stay',
   },
   {
-    src: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=800&auto=format&fit=crop&q=80',
-    cap: 'Executive Advisory',
+    src: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop&q=80',
+    cap: 'Family Visit Visas',
   },
 ];
 
 const team = [
   {
     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=80',
-    name: 'Omar Haddad',
-    role: 'Managing Partner',
-  },
-  {
-    photo: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=80',
-    name: 'Nadia Karim',
-    role: 'Head of Strategy',
+    name: 'Imran Sheikh',
+    role: 'Managing Director',
   },
   {
     photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80',
-    name: 'Yusuf Rahman',
-    role: 'Financial Advisory Lead',
+    name: 'Bilal Ahmed',
+    role: 'Head of Recruitment',
+  },
+  {
+    photo: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=80',
+    name: 'Sana Malik',
+    role: 'Documentation Lead',
   },
   {
     photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80',
-    name: 'Amira Saleh',
-    role: 'Operations Director',
+    name: 'Ayesha Rafiq',
+    role: 'Umrah & Travel Coordinator',
   },
 ];
 
 const stats = [
-  { count: '180', suffix: '+', l: 'Engagements completed' },
-  { count: '12', suffix: '', l: 'Countries served' },
-  { count: '94', suffix: '%', l: 'Client retention rate' },
-  { count: '2', prefix: '$', suffix: 'B+', l: 'Client value influenced' },
+  { count: '8', suffix: '', l: 'Core services offered' },
+  { count: '100', suffix: '%', l: 'Legal, contract-based hiring' },
+  { count: '2', suffix: '', l: 'Countries, one bridge' },
+  { count: '24', suffix: '/7', l: 'Client support' },
 ];
 
 const CheckIcon = () => (
@@ -234,25 +311,33 @@ export default function Home() {
         <div className="container">
           <div className="services-top">
             <div data-aos="fade-up">
-              <span className="eyebrow">What We Do</span>
+              <span className="eyebrow">Our Services</span>
               <h2 className="h2">
-                Expertise aligned
+                Every step of your
                 <br />
-                with your ambitions
+                journey, handled
               </h2>
             </div>
             <p className="lead" data-aos="fade-up" data-aos-delay="100" style={{ maxWidth: '38ch' }}>
-              From high-level strategy to on-the-ground execution, every
-              engagement is shaped around your specific challenge.
+              From work visas and manpower recruitment to Umrah packages and
+              family visit visas — one team manages it end to end.
             </p>
           </div>
-          <div className="svc-grid">
+          <div className="svc-grid svc-grid-4">
             {services.map((s, i) => (
-              <div className="svc" data-aos="fade-up" data-aos-delay={(i % 3) * 100} key={s.num}>
+              <div className="svc" data-aos="fade-up" data-aos-delay={(i % 4) * 90} key={s.num}>
                 <div className="svc-num">{s.num}</div>
                 <div className="svc-icon">{s.icon}</div>
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.desc}</p>
+                <ul className="svc-points">
+                  {s.points.map((p) => (
+                    <li key={p}>
+                      <CheckIcon />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
                 <ArrowIcon />
               </div>
             ))}
@@ -264,33 +349,40 @@ export default function Home() {
       <section id="about">
         <div className="container">
           <div className="about-grid">
-            <div className="about-imgs" data-aos="fade-right">
+            <div className="about-imgs" data-aos="fade-up">
               <div className="about-img-main">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&auto=format&fit=crop&q=80"
                   alt="Consultancy team at work"
                 />
               </div>
               <div className="about-img-float">
                 <img
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80"
-                  alt="Strategy session"
+                  src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=600&auto=format&fit=crop&q=80"
+                  alt="Documentation review"
                 />
               </div>
               <div className="about-stat">
-                <div className="about-stat-n">12+</div>
-                <div className="about-stat-l">Years of practice</div>
+                <div className="about-stat-n">8</div>
+                <div className="about-stat-l">Services under one roof</div>
               </div>
             </div>
-            <div data-aos="fade-left">
-              <span className="eyebrow">About Haya</span>
-              <h2 className="h2">Built on honest advice, not inflated decks</h2>
+            <div data-aos="fade-up">
+              <span className="eyebrow">About Us</span>
+              <h2 className="h2">Your bridge between Pakistan and Saudi Arabia</h2>
               <p className="about-body">
-                Haya Consultancy was founded on the belief that the best
-                consulting relationships feel less like vendor contracts and
-                more like trusted partnerships. We work alongside your team —
-                sharing risk, staying accountable, measuring success by outcomes
-                that last.
+                We are a Pakistan-based visa consultancy specializing in
+                overseas employment, travel, and documentation services
+                between Pakistan and Saudi Arabia. We support individuals
+                seeking work or travel abroad, and employers looking to hire
+                reliable manpower from Pakistan.
+              </p>
+              <p className="about-body">
+                Our team manages the complete process — from candidate
+                sourcing and contract preparation to visa processing, medical
+                appointments, ticketing, and final departure — so our clients
+                never have to deal with agents, middlemen, or confusing
+                paperwork on their own.
               </p>
               <div className="about-points">
                 {aboutPoints.map((p) => (
@@ -306,7 +398,7 @@ export default function Home() {
                 ))}
               </div>
               <a href="#contact" className="btn btn-copper btn-lg" style={{ marginTop: '2.5rem' }}>
-                Work With Us
+                Get Started Today
               </a>
             </div>
           </div>
@@ -338,19 +430,19 @@ export default function Home() {
       <div className="img-section">
         <div className="img-section-bg" data-parallax>
           <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&auto=format&fit=crop&q=80"
-            alt="Modern office"
+            src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1600&auto=format&fit=crop&q=80"
+            alt="Makkah travel"
           />
         </div>
         <div className="img-section-content on-dark">
           <div className="container">
             <div className="img-section-text" data-aos="fade-up">
-              <span className="eyebrow">Our Approach</span>
-              <h2 className="h2">Clarity is the most valuable deliverable we provide</h2>
+              <span className="eyebrow">Why Choose Us</span>
+              <h2 className="h2">Honest guidance, not false promises</h2>
               <p className="lead">
-                Most organizations don&apos;t lack information. They lack a
-                clear point of view on what to do next — and the confidence to
-                act on it. That&apos;s what we build.
+                No fake job offers. No exploitation. Every contract is legally
+                binding and every traveler gets accurate, timely guidance from
+                consultation to arrival.
               </p>
               <a href="#process" className="btn btn-copper btn-lg" style={{ marginTop: '2rem' }}>
                 See How We Work
@@ -364,14 +456,14 @@ export default function Home() {
       <section className="process" id="process">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
-            <span className="eyebrow" data-aos="fade-up">How We Work</span>
-            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">A clear process with no unnecessary complexity</h2>
+            <span className="eyebrow" data-aos="fade-up">Our Process</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">From consultation to deployment</h2>
             <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
-              Every engagement moves through a consistent structure so you
-              always know where things stand and what comes next.
+              Every case moves through a consistent structure so you always
+              know where things stand and what comes next.
             </p>
           </div>
-          <div className="process-grid">
+          <div className="process-grid process-grid-4">
             {steps.map((s, i) => (
               <div className="pstep" data-n={s.n} data-aos="fade-up" data-aos-delay={i * 100} key={s.n}>
                 <div className="pstep-n">{s.label}</div>
@@ -391,27 +483,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* WHY US */}
       <section className="testimonials" id="testimonials">
         <div className="container">
           <div className="on-dark">
-            <span className="eyebrow" data-aos="fade-up">Client Voices</span>
-            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">What our partners say</h2>
+            <span className="eyebrow" data-aos="fade-up">Why Choose Us</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
+              Why families and workers trust us
+            </h2>
           </div>
-          <div className="tgrid">
-            {testimonials.map((t, i) => (
-              <div className="tcard" data-aos="fade-up" data-aos-delay={(i % 2) * 100} key={t.name}>
-                <div className="tcard-stars">★★★★★</div>
-                <blockquote>{t.quote}</blockquote>
-                <div className="tauthor">
-                  <div className="avatar">
-                    <img src={t.photo} alt={t.name} loading="lazy" />
-                  </div>
-                  <div>
-                    <div className="aname">{t.name}</div>
-                    <div className="atitle">{t.title}</div>
-                  </div>
+          <div className="tgrid tgrid-3">
+            {whyUs.map((w, i) => (
+              <div className="tcard why-card" data-aos="fade-up" data-aos-delay={(i % 3) * 100} key={w.title}>
+                <div className="why-check">
+                  <CheckIcon />
                 </div>
+                <h4 className="why-title">{w.title}</h4>
+                <p className="why-desc">{w.desc}</p>
               </div>
             ))}
           </div>
@@ -422,13 +510,13 @@ export default function Home() {
       <section className="team" id="team">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
-            <span className="eyebrow" data-aos="fade-up">The People</span>
+            <span className="eyebrow" data-aos="fade-up">Our Team</span>
             <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
-              Senior advisors who stay on the project
+              The people who manage your case
             </h2>
             <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
-              Every engagement is led by a partner you meet on day one — backed
-              by specialists across strategy, finance, and operations.
+              A dedicated team handling recruitment, documentation, and travel
+              — so you always have someone to call.
             </p>
           </div>
           <div className="team-grid">
@@ -447,19 +535,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="faq" id="faq">
+        <div className="container">
+          <div style={{ maxWidth: 600 }}>
+            <span className="eyebrow" data-aos="fade-up">Common Questions</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((f, i) => (
+              <details className="faq-item" data-aos="fade-up" data-aos-delay={(i % 3) * 80} key={f.q}>
+                <summary>
+                  <span>{f.q}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section className="contact" id="contact">
         <div className="container">
           <div style={{ maxWidth: 600 }}>
             <span className="eyebrow" data-aos="fade-up">Get In Touch</span>
-            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">Let&apos;s figure out what&apos;s possible together</h2>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">Get Started Today</h2>
             <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
-              No obligation, no pitch deck on the first call. Just an honest
-              conversation about what you&apos;re trying to accomplish.
+              Whether you&apos;re looking for a job opportunity in Saudi
+              Arabia, need help with your paperwork, or are planning your
+              Umrah journey, our team is ready to guide you every step of the
+              way.
             </p>
           </div>
           <div className="contact-grid">
-            <div data-aos="fade-right">
+            <div data-aos="fade-up">
               <div className="contact-info-item">
                 <div className="contact-info-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -469,7 +584,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4>Visit Us</h4>
-                  <p>Dubai, United Arab Emirates</p>
+                  <p>Office Address, City, Pakistan</p>
                 </div>
               </div>
               <div className="contact-info-item">
@@ -481,7 +596,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4>Email Us</h4>
-                  <p>hello@hayaconsultancy.com</p>
+                  <p>hayavisa28@gmail.com</p>
                 </div>
               </div>
               <div className="contact-info-item">
@@ -491,19 +606,19 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4>Call Us</h4>
-                  <p>+971 4 555 0000</p>
+                  <h4>Call / WhatsApp</h4>
+                  <p>0542196208</p>
                 </div>
               </div>
               <div className="contact-img">
                 <img
-                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=900&auto=format&fit=crop&q=80"
-                  alt="Haya Consultancy office"
+                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&auto=format&fit=crop&q=80"
+                  alt="Office consultation"
                   loading="lazy"
                 />
               </div>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up">
               <ContactForm />
             </div>
           </div>
@@ -517,18 +632,18 @@ export default function Home() {
             <div className="footer-brand">
               <a href="/" className="nav-logo">
                 <div className="logo-sq">H</div>
-                <span>Haya</span>
+                <span>Haya Visa</span>
               </a>
-              <p>Strategic advisory for organizations ready to grow with purpose and precision.</p>
+              <p>Guiding journeys, simplifying paperwork, opening possibilities between Pakistan and Saudi Arabia.</p>
             </div>
             <div className="fcol">
               <h4>Services</h4>
               <ul>
-                <li><a href="#services">Business Strategy</a></li>
-                <li><a href="#services">Financial Advisory</a></li>
-                <li><a href="#services">Operations</a></li>
-                <li><a href="#services">Digital Transformation</a></li>
-                <li><a href="#services">Market Expansion</a></li>
+                <li><a href="#services">Work Visa &amp; Manpower</a></li>
+                <li><a href="#services">Umrah Visa Services</a></li>
+                <li><a href="#services">Visit Visa Services</a></li>
+                <li><a href="#services">Medical &amp; File Prep</a></li>
+                <li><a href="#services">Iqama &amp; Work Permits</a></li>
               </ul>
             </div>
             <div className="fcol">
@@ -536,8 +651,8 @@ export default function Home() {
               <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#process">How We Work</a></li>
-                <li><a href="#testimonials">Case Studies</a></li>
-                <li><a href="#contact">Careers</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#faq">FAQs</a></li>
               </ul>
             </div>
             <div className="fcol">
@@ -547,35 +662,34 @@ export default function Home() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Dubai, United Arab Emirates</span>
+                <span>Office Address, City, Pakistan</span>
               </div>
               <div className="fcontact">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <span>hello@hayaconsultancy.com</span>
+                <span>hayavisa28@gmail.com</span>
               </div>
               <div className="fcontact">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" />
                 </svg>
-                <span>+971 4 555 0000</span>
+                <span>0542196208</span>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>© 2026 Haya Consultancy. All rights reserved.</p>
+            <p>© 2026 Haya Visa Consultancy. All rights reserved.</p>
             <div className="fsocial">
-              <a href="#" aria-label="LinkedIn">
+              <a href="#" aria-label="Facebook">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                  <circle cx="4" cy="4" r="2" />
+                  <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9H16l-.4 2.9h-2.1v7A10 10 0 0022 12z" />
                 </svg>
               </a>
-              <a href="#" aria-label="X">
+              <a href="#" aria-label="WhatsApp">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  <path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.1 1.6z" />
                 </svg>
               </a>
               <a href="#" aria-label="Instagram">

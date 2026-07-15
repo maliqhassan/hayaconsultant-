@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="hero" aria-label="Introduction">
       <div className="hero-bg" data-parallax>
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&auto=format&fit=crop&q=80"
           alt=""
         />
       </div>
@@ -27,20 +27,18 @@ export default function Hero() {
         animate="show"
       >
         <motion.h1 className="h1" variants={item}>
-          We turn <span>complex</span> challenges into clear outcomes
+          Your Trusted <span>Bridge</span> Between Pakistan and Saudi Arabia
         </motion.h1>
         <motion.p className="lead" variants={item}>
-          Haya Consultancy is a full-service management consulting agency. We
-          work with businesses at every stage — from ambitious startups to
-          established enterprises — to drive sustainable growth and lasting
-          impact.
+          From work visas to Umrah travel, we handle every step of your
+          journey — with honesty, speed, and complete documentation support.
         </motion.p>
         <motion.div className="hero-actions" variants={item}>
           <a href="#contact" className="btn btn-copper btn-lg">
-            Get a Free Consultation
+            Get Started
           </a>
           <a href="#services" className="btn btn-line btn-lg">
-            Our Services
+            Explore Job Openings
           </a>
         </motion.div>
       </motion.div>
@@ -53,20 +51,20 @@ export default function Hero() {
         <div className="container">
           <div className="hero-strip-grid">
             <div className="hstat">
-              <div className="hstat-n" data-count="180" data-suffix="+">0</div>
-              <div className="hstat-l">Engagements</div>
+              <div className="hstat-n" data-count="8">0</div>
+              <div className="hstat-l">Core Services</div>
             </div>
             <div className="hstat">
-              <div className="hstat-n" data-count="4.9" data-decimals="1" data-suffix="/5">0</div>
-              <div className="hstat-l">Client Satisfaction</div>
+              <div className="hstat-n" data-count="100" data-suffix="%">0</div>
+              <div className="hstat-l">Legal Contracts</div>
             </div>
             <div className="hstat">
-              <div className="hstat-n" data-count="34" data-prefix="+" data-suffix="%">0</div>
-              <div className="hstat-l">Avg. Revenue Growth</div>
+              <div className="hstat-n" data-count="2" data-suffix="+">0</div>
+              <div className="hstat-l">Countries Connected</div>
             </div>
             <div className="hstat">
-              <div className="hstat-n" data-count="12">0</div>
-              <div className="hstat-l">Countries Served</div>
+              <div className="hstat-n" data-count="24" data-suffix="/7">0</div>
+              <div className="hstat-l">Client Support</div>
             </div>
           </div>
         </div>
