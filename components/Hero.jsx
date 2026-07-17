@@ -14,39 +14,68 @@ const item = {
 export default function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
-      <div className="hero-bg" data-parallax>
-        <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&auto=format&fit=crop&q=80"
-          alt=""
-        />
-      </div>
-      <motion.div
-        className="hero-inner"
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
-        <motion.h1 className="h1" variants={item}>
-          Your Trusted <span>Bridge</span> Between Pakistan and Saudi Arabia
-        </motion.h1>
-        <motion.p className="lead" variants={item}>
-          From work visas to Umrah travel, we handle every step of your
-          journey — with honesty, speed, and complete documentation support.
-        </motion.p>
-        <motion.div className="hero-actions" variants={item}>
-          <a href="#contact" className="btn btn-copper btn-lg">
-            Get Started
-          </a>
-          <a href="#services" className="btn btn-line btn-lg">
-            Explore Job Openings
-          </a>
+      <div className="hero-split">
+        <motion.div
+          className="hero-left"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div className="hero-badge-row" variants={item}>
+            <span className="hero-badge-dot"></span>
+            Pakistan &rarr; Saudi Arabia
+          </motion.div>
+          <motion.h1 className="h1" variants={item}>
+            Your Trusted <span>Bridge</span> Between Pakistan and Saudi Arabia
+          </motion.h1>
+          <motion.p className="lead" variants={item}>
+            From work visas to Umrah travel, we handle every step of your
+            journey — with honesty, speed, and complete documentation
+            support.
+          </motion.p>
+          <motion.div className="hero-actions" variants={item}>
+            <a href="#contact" className="btn btn-copper btn-lg">
+              Get Started
+            </a>
+            <a href="#services" className="btn btn-line btn-lg">
+              Explore Job Openings
+            </a>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+        <motion.div
+          className="hero-right"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="hero-shape" aria-hidden="true"></div>
+          <div className="hero-img-frame" data-parallax>
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000&auto=format&fit=crop&q=80"
+              alt="Traveler with passport and documents"
+            />
+          </div>
+          <div className="hero-float-card">
+            <div className="hero-float-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </div>
+            <div>
+              <p>Contracts</p>
+              <strong>100% Legal &amp; Verified</strong>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       <motion.div
         className="hero-strip"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.9, duration: 0.7 }}
+        transition={{ delay: 0.6, duration: 0.7 }}
       >
         <div className="container">
           <div className="hero-strip-grid">
