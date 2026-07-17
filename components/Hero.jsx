@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const container = {
   hidden: {},
@@ -11,16 +12,27 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const scrollerImages = [
-  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=300&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=300&auto=format&fit=crop&q=80',
+const bannerImages = [
+  {
+    src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80',
+    alt: 'Professional consulting team',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&auto=format&fit=crop&q=80',
+    alt: 'Traveler ready for departure',
+  },
 ];
 
 export default function Hero() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setActive((i) => (i + 1) % bannerImages.length);
+    }, 4200);
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <section className="hero" aria-label="Introduction">
       <div className="hero-split">
@@ -60,13 +72,33 @@ export default function Hero() {
         >
           <div className="hero-shape" aria-hidden="true"></div>
           <div className="hero-img-frame" data-parallax>
-            <motion.img
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000&auto=format&fit=crop&q=80"
-              alt="Traveler with passport and documents"
-              initial={{ scale: 1.15 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-            />
+            <AnimatePresence mode="sync">
+              {bannerImages.map(
+                (img, i) =>
+                  i === active && (
+                    <motion.img
+                      key={img.src}
+                      src={img.src}
+                      alt={img.alt}
+                      initial={{ opacity: 0, scale: 1.08 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      className="hero-img-slide"
+                    />
+                  )
+              )}
+            </AnimatePresence>
+            <div className="hero-img-dots">
+              {bannerImages.map((img, i) => (
+                <button
+                  key={img.src}
+                  className={`hero-img-dot${i === active ? ' active' : ''}`}
+                  aria-label={`Show image ${i + 1}`}
+                  onClick={() => setActive(i)}
+                />
+              ))}
+            </div>
           </div>
           <motion.div
             className="hero-float-card"
@@ -118,16 +150,6 @@ export default function Hero() {
           </div>
         </div>
       </motion.div>
-
-      <div className="img-scroller">
-        <div className="img-scroller-track">
-          {[...scrollerImages, ...scrollerImages].map((src, i) => (
-            <div className="img-scroller-item" key={i}>
-              <img src={src} alt="" loading="lazy" />
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

@@ -18,12 +18,10 @@ const services = [
     num: '01',
     img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&auto=format&fit=crop&q=80',
     title: 'Work Visa & Manpower Services',
-    desc: 'We connect job seekers with verified Saudi employers and help businesses source dependable manpower across construction, healthcare, hospitality, technical trades, and general labor.',
+    desc: 'Connecting job seekers with verified Saudi employers across every major industry.',
     points: [
-      'Work visa processing for Saudi Arabia',
-      'Screening of skilled, semi-skilled & professional candidates',
-      'Bulk manpower recruitment for companies and projects',
-      'Coordination with licensed, verified Saudi employers',
+      'Visa processing & candidate screening',
+      'Bulk manpower for companies',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -36,12 +34,10 @@ const services = [
     num: '02',
     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format&fit=crop&q=80',
     title: 'Employment With Proper Contracts',
-    desc: "Every placement comes with a proper, legally binding employment contract — not just a verbal promise. You'll know exactly what you're signing up for before you travel.",
+    desc: 'Every placement comes with a legally binding contract, not a verbal promise.',
     points: [
-      'Clear terms for job role, salary & working hours',
-      'Contract duration, renewal & termination terms',
-      'Employer obligations, accommodation & benefits',
-      'Full transparency before departure — no hidden clauses',
+      'Clear salary & job terms',
+      'No hidden clauses',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -54,12 +50,10 @@ const services = [
     num: '03',
     img: 'https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=600&auto=format&fit=crop&q=80',
     title: 'Medical & Appointment Services',
-    desc: 'Every overseas work visa requires a medical fitness certificate from an approved medical center. We take the guesswork out of this step, start to finish.',
+    desc: 'Booking and guidance for your GAMCA-approved medical fitness test.',
     points: [
-      'Booking at GAMCA-approved medical centers',
-      'Guidance on required tests & fitness criteria',
-      'Follow-up on medical reports and submission',
-      'Re-scheduling & support for complications',
+      'GAMCA-approved center booking',
+      'Reports & re-scheduling support',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -72,12 +66,10 @@ const services = [
     num: '04',
     img: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&auto=format&fit=crop&q=80',
     title: 'File Preparation',
-    desc: 'A strong visa application starts with a correctly prepared file. Our team makes sure nothing is missing or incorrect before submission.',
+    desc: 'A correctly prepared file so nothing is missing before submission.',
     points: [
-      'Document collection, verification & organization',
-      'Application form filling per embassy/GAMCA rules',
-      'File compilation to exact immigration standards',
-      'Accuracy checks to prevent rejection or delay',
+      'Document collection & verification',
+      'Accuracy checks before filing',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,12 +82,10 @@ const services = [
     num: '05',
     img: 'https://images.unsplash.com/photo-1554224311-beee415c201f?w=600&auto=format&fit=crop&q=80',
     title: 'Legal & Administrative Paperwork',
-    desc: 'Once you are in Saudi Arabia, staying legally compliant matters just as much as getting there. We assist with Iqama and work permit paperwork after deployment.',
+    desc: 'Staying compliant matters as much as getting there — Iqama & permits.',
     points: [
-      'Iqama (residency permit) processing & renewal',
-      'Work permit documentation',
-      'Guidance on Saudi labor law & Kafala sponsorship',
-      'Assistance with government formalities',
+      'Iqama processing & renewal',
+      'Kafala & labor law guidance',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -108,11 +98,10 @@ const services = [
     num: '06',
     img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&auto=format&fit=crop&q=80',
     title: 'Air Ticket Booking',
-    desc: 'We handle your travel arrangements so your journey starts smoothly from day one — individual or group, outbound or return.',
+    desc: 'Travel arrangements coordinated with your visa and joining date.',
     points: [
-      'Individual and group air ticket booking',
-      'Travel dates coordinated with visa & joining schedule',
-      'Support for outbound and return/exit tickets',
+      'Individual & group bookings',
+      'Outbound & return tickets',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -124,12 +113,10 @@ const services = [
     num: '07',
     img: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80',
     title: 'Umrah Visa Services',
-    desc: 'Planning to perform Umrah? We manage the complete package — visa, accommodation, and travel — so you can focus on your spiritual journey.',
+    desc: 'A complete Umrah package — visa, hotel, and travel handled together.',
     points: [
-      'Umrah visa application and processing',
-      'Hotel booking near Haram in Makkah & Madinah',
-      'Guidance for individuals, families & groups',
-      'Complete travel coordination — flights & transport',
+      'Hotels near Haram, Makkah & Madinah',
+      'Flights & transport included',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -142,12 +129,10 @@ const services = [
     num: '08',
     img: 'https://images.unsplash.com/photo-1541959833400-049d37f98ccd?w=600&auto=format&fit=crop&q=80',
     title: 'Visit Visa Services',
-    desc: 'Whether visiting family, attending business meetings, or exploring Saudi Arabia, we make the visit visa process simple for individuals and families.',
+    desc: 'A simple visit visa process for individuals, families & business trips.',
     points: [
-      'Individual visit visa processing',
-      'Family visit visa processing',
-      'Document guidance and application support',
-      'Assistance with validity & extensions',
+      'Individual & family processing',
+      'Validity & extension support',
     ],
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -255,22 +240,22 @@ const regions = [
   {
     city: 'Riyadh',
     tag: 'Capital & Corporate Hub',
-    img: 'https://images.unsplash.com/photo-1547194589-46c2b0b0b8a6?w=700&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&auto=format&fit=crop&q=80',
   },
   {
     city: 'Jeddah',
     tag: 'Gateway to the Two Holy Cities',
-    img: 'https://images.unsplash.com/photo-1609954634097-3aebc4508bd6?w=700&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&auto=format&fit=crop&q=80',
   },
   {
     city: 'Makkah',
     tag: 'Umrah & Hajj Pilgrims',
-    img: 'https://images.unsplash.com/photo-1565019011521-b0575e5a41ea?w=700&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=700&auto=format&fit=crop&q=80',
   },
   {
     city: 'Madinah',
     tag: 'Umrah Travel & Stay',
-    img: 'https://images.unsplash.com/photo-1591273839952-91c1b6f5b7c9?w=700&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=700&auto=format&fit=crop&q=80',
   },
   {
     city: 'Dammam & Khobar',
