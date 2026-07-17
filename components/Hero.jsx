@@ -11,6 +11,15 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
 };
 
+const scrollerImages = [
+  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=300&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=300&auto=format&fit=crop&q=80',
+];
+
 export default function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
@@ -51,12 +60,23 @@ export default function Hero() {
         >
           <div className="hero-shape" aria-hidden="true"></div>
           <div className="hero-img-frame" data-parallax>
-            <img
+            <motion.img
               src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000&auto=format&fit=crop&q=80"
               alt="Traveler with passport and documents"
+              initial={{ scale: 1.15 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
             />
           </div>
-          <div className="hero-float-card">
+          <motion.div
+            className="hero-float-card"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: [0, -8, 0] }}
+            transition={{
+              opacity: { duration: 0.6, delay: 0.8 },
+              y: { duration: 3.4, repeat: Infinity, ease: 'easeInOut', delay: 1 },
+            }}
+          >
             <div className="hero-float-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 12l2 2 4-4" />
@@ -67,7 +87,7 @@ export default function Hero() {
               <p>Contracts</p>
               <strong>100% Legal &amp; Verified</strong>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -98,6 +118,16 @@ export default function Hero() {
           </div>
         </div>
       </motion.div>
+
+      <div className="img-scroller">
+        <div className="img-scroller-track">
+          {[...scrollerImages, ...scrollerImages].map((src, i) => (
+            <div className="img-scroller-item" key={i}>
+              <img src={src} alt="" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

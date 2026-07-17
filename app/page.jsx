@@ -16,6 +16,7 @@ const trustNames = [
 const services = [
   {
     num: '01',
+    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&auto=format&fit=crop&q=80',
     title: 'Work Visa & Manpower Services',
     desc: 'We connect job seekers with verified Saudi employers and help businesses source dependable manpower across construction, healthcare, hospitality, technical trades, and general labor.',
     points: [
@@ -33,6 +34,7 @@ const services = [
   },
   {
     num: '02',
+    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format&fit=crop&q=80',
     title: 'Employment With Proper Contracts',
     desc: "Every placement comes with a proper, legally binding employment contract — not just a verbal promise. You'll know exactly what you're signing up for before you travel.",
     points: [
@@ -50,6 +52,7 @@ const services = [
   },
   {
     num: '03',
+    img: 'https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=600&auto=format&fit=crop&q=80',
     title: 'Medical & Appointment Services',
     desc: 'Every overseas work visa requires a medical fitness certificate from an approved medical center. We take the guesswork out of this step, start to finish.',
     points: [
@@ -67,6 +70,7 @@ const services = [
   },
   {
     num: '04',
+    img: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&auto=format&fit=crop&q=80',
     title: 'File Preparation',
     desc: 'A strong visa application starts with a correctly prepared file. Our team makes sure nothing is missing or incorrect before submission.',
     points: [
@@ -84,6 +88,7 @@ const services = [
   },
   {
     num: '05',
+    img: 'https://images.unsplash.com/photo-1554224311-beee415c201f?w=600&auto=format&fit=crop&q=80',
     title: 'Legal & Administrative Paperwork',
     desc: 'Once you are in Saudi Arabia, staying legally compliant matters just as much as getting there. We assist with Iqama and work permit paperwork after deployment.',
     points: [
@@ -101,6 +106,7 @@ const services = [
   },
   {
     num: '06',
+    img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&auto=format&fit=crop&q=80',
     title: 'Air Ticket Booking',
     desc: 'We handle your travel arrangements so your journey starts smoothly from day one — individual or group, outbound or return.',
     points: [
@@ -116,6 +122,7 @@ const services = [
   },
   {
     num: '07',
+    img: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80',
     title: 'Umrah Visa Services',
     desc: 'Planning to perform Umrah? We manage the complete package — visa, accommodation, and travel — so you can focus on your spiritual journey.',
     points: [
@@ -133,6 +140,7 @@ const services = [
   },
   {
     num: '08',
+    img: 'https://images.unsplash.com/photo-1541959833400-049d37f98ccd?w=600&auto=format&fit=crop&q=80',
     title: 'Visit Visa Services',
     desc: 'Whether visiting family, attending business meetings, or exploring Saudi Arabia, we make the visit visa process simple for individuals and families.',
     points: [
@@ -243,6 +251,39 @@ const gallery = [
   },
 ];
 
+const regions = [
+  {
+    city: 'Riyadh',
+    tag: 'Capital & Corporate Hub',
+    img: 'https://images.unsplash.com/photo-1547194589-46c2b0b0b8a6?w=700&auto=format&fit=crop&q=80',
+  },
+  {
+    city: 'Jeddah',
+    tag: 'Gateway to the Two Holy Cities',
+    img: 'https://images.unsplash.com/photo-1609954634097-3aebc4508bd6?w=700&auto=format&fit=crop&q=80',
+  },
+  {
+    city: 'Makkah',
+    tag: 'Umrah & Hajj Pilgrims',
+    img: 'https://images.unsplash.com/photo-1565019011521-b0575e5a41ea?w=700&auto=format&fit=crop&q=80',
+  },
+  {
+    city: 'Madinah',
+    tag: 'Umrah Travel & Stay',
+    img: 'https://images.unsplash.com/photo-1591273839952-91c1b6f5b7c9?w=700&auto=format&fit=crop&q=80',
+  },
+  {
+    city: 'Dammam & Khobar',
+    tag: 'Industrial & Oil Sector',
+    img: 'https://images.unsplash.com/photo-1518481852452-9415b262eba4?w=700&auto=format&fit=crop&q=80',
+  },
+  {
+    city: 'Islamabad & Lahore',
+    tag: 'Our Pakistan Offices',
+    img: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=700&auto=format&fit=crop&q=80',
+  },
+];
+
 const team = [
   {
     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=80',
@@ -306,6 +347,55 @@ export default function Home() {
         </div>
       </div>
 
+      {/* PREMIER TALENT */}
+      <section className="talent">
+        <div className="container">
+          <div className="talent-grid">
+            <div className="talent-imgs" data-aos="fade-up">
+              <div className="talent-img-main">
+                <img
+                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900&auto=format&fit=crop&q=80"
+                  alt="Skilled technical worker on site"
+                />
+              </div>
+              <div className="talent-img-sub">
+                <img
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&auto=format&fit=crop&q=80"
+                  alt="Healthcare professional at work"
+                />
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+              <span className="eyebrow">Manpower Export</span>
+              <h2 className="h2">Premier Talent In Gulf Markets</h2>
+              <p className="lead" style={{ marginTop: '1rem' }}>
+                We source, screen, and place Pakistan&apos;s most reliable
+                skilled and semi-skilled workforce with verified Saudi
+                employers — across construction, healthcare, hospitality,
+                technical trades, and general labor.
+              </p>
+              <div className="talent-stats">
+                <div className="talent-stat">
+                  <div className="talent-stat-n">6+</div>
+                  <div className="talent-stat-l">Industries covered</div>
+                </div>
+                <div className="talent-stat">
+                  <div className="talent-stat-n">100%</div>
+                  <div className="talent-stat-l">Verified employers</div>
+                </div>
+                <div className="talent-stat">
+                  <div className="talent-stat-n">0</div>
+                  <div className="talent-stat-l">Hidden agent fees</div>
+                </div>
+              </div>
+              <a href="#services" className="btn btn-copper btn-lg" style={{ marginTop: '2rem' }}>
+                View Job Categories
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="services" id="services">
         <div className="container">
@@ -326,8 +416,11 @@ export default function Home() {
           <div className="svc-grid svc-grid-4">
             {services.map((s, i) => (
               <div className="svc" data-aos="fade-up" data-aos-delay={(i % 4) * 90} key={s.num}>
-                <div className="svc-num">{s.num}</div>
-                <div className="svc-icon">{s.icon}</div>
+                <div className="svc-img">
+                  <img src={s.img} alt={s.title} loading="lazy" />
+                  <div className="svc-num">{s.num}</div>
+                  <div className="svc-icon">{s.icon}</div>
+                </div>
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.desc}</p>
                 <ul className="svc-points">
@@ -477,6 +570,34 @@ export default function Home() {
               <div className="gallery-item" data-aos="zoom-in" data-aos-delay={i * 100} key={g.cap}>
                 <img src={g.src} alt={g.cap} loading="lazy" />
                 <span className="gallery-cap">{g.cap}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REGIONS WE SERVE */}
+      <section className="regions" id="regions">
+        <div className="container">
+          <div style={{ maxWidth: 600 }}>
+            <span className="eyebrow" data-aos="fade-up">Regions We Serve</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
+              Connected across Pakistan and Saudi Arabia
+            </h2>
+            <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
+              From our offices in Pakistan to every major Saudi city, we
+              coordinate placements, Umrah travel, and visit visas wherever
+              you need to be.
+            </p>
+          </div>
+          <div className="region-grid">
+            {regions.map((r, i) => (
+              <div className="region-card" data-aos="fade-up" data-aos-delay={(i % 3) * 90} key={r.city}>
+                <img src={r.img} alt={r.city} loading="lazy" />
+                <div className="region-overlay">
+                  <h4>{r.city}</h4>
+                  <p>{r.tag}</p>
+                </div>
               </div>
             ))}
           </div>
