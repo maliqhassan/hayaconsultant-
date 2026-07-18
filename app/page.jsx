@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import AOSInit from '../components/AOSInit';
@@ -162,26 +163,39 @@ const steps = [
   {
     n: '1',
     label: 'STEP 01',
-    title: 'Consultation & Requirement Review',
-    desc: "We understand your goal — employment, Umrah, or a family visit — and guide you on the right visa category.",
+    title: 'Document Submission & Verification',
+    desc: 'Submit your documents for professional review, verification, and eligibility assessment.',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <path d="M14 2v6h6M8 13h8M8 17h5" />
+      </svg>
+    ),
   },
   {
     n: '2',
     label: 'STEP 02',
-    title: 'Document & File Preparation',
-    desc: 'We collect, verify, and prepare your complete file, including medical appointments where required.',
+    title: 'Visa Processing & Approval',
+    desc: 'We manage the visa application, medical appointments, and embassy requirements for smooth approval.',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
   },
   {
     n: '3',
     label: 'STEP 03',
-    title: 'Visa Processing & Approval',
-    desc: 'Our team manages the visa application, contract issuance, and all legal/administrative steps.',
-  },
-  {
-    n: '4',
-    label: 'STEP 04',
     title: 'Travel & Deployment',
-    desc: 'We arrange air tickets, hotel bookings (for Umrah), and coordinate your departure and arrival smoothly.',
+    desc: 'Once approved, we arrange air tickets, hotel bookings, and coordinate your departure smoothly.',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" />
+        <circle cx="12" cy="11" r="3" />
+        <path d="M9 17h6" />
+      </svg>
+    ),
   },
 ];
 
@@ -533,23 +547,54 @@ export default function Home() {
       {/* PROCESS */}
       <section className="process" id="process">
         <div className="container">
-          <div style={{ maxWidth: 600 }}>
-            <span className="eyebrow" data-aos="fade-up">Our Process</span>
-            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">From consultation to deployment</h2>
-            <p className="lead" data-aos="fade-up" data-aos-delay="160" style={{ marginTop: '1rem' }}>
-              Every case moves through a consistent structure so you always
-              know where things stand and what comes next.
+          <div className="process-head">
+            <span className="process-pill" data-aos="fade-up">Working Process</span>
+            <h2 className="h2" data-aos="fade-up" data-aos-delay="80">
+              Get your visa approved in <span className="process-highlight">3 simple steps</span>
+            </h2>
+            <p className="lead" data-aos="fade-up" data-aos-delay="160">
+              A streamlined process designed to move your application from
+              document review to final deployment with clarity and
+              confidence.
             </p>
           </div>
-          <div className="process-grid process-grid-4">
+
+          <div className="process-path" data-aos="fade-up" data-aos-delay="100">
+            <svg className="process-path-line" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M40 70 C 260 10, 420 10, 500 45 C 580 80, 740 80, 960 20" stroke="var(--line)" strokeWidth="2" strokeDasharray="7 8" fill="none" />
+              <path d="M930 12 L 962 20 L 946 46" stroke="var(--line)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <div className="process-circles">
+              {steps.map((s) => (
+                <div className="process-circle" key={s.n}>
+                  <div className="process-circle-inner">{s.icon}</div>
+                  <div className="process-circle-check">
+                    <CheckIcon />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="process-grid process-grid-3">
             {steps.map((s, i) => (
-              <div className="pstep" data-n={s.n} data-aos="fade-up" data-aos-delay={i * 100} key={s.n}>
-                <div className="pstep-n">{s.label}</div>
-                <h3 className="h3">{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
+              <Fragment key={s.n}>
+                <div className="pstep" data-n={s.n} data-aos="fade-up" data-aos-delay={i * 100}>
+                  <div className="pstep-n">{s.label}</div>
+                  <h3 className="h3">{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="pstep-chevron" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 4l6 8-6 8M12 4l6 8-6 8" />
+                    </svg>
+                  </div>
+                )}
+              </Fragment>
             ))}
           </div>
+
           <div className="gallery">
             {gallery.map((g, i) => (
               <div className="gallery-item" data-aos="zoom-in" data-aos-delay={i * 100} key={g.cap}>
